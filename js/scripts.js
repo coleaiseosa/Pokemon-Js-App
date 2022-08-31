@@ -1,22 +1,30 @@
 let pokemonList = [
   {
     name : 'Bulbasaur',
-    height : 7,
+    height : 0.7,
     types : ['grass', 'poison']
   },
   {
     name : 'Charizard',
-    height : 8,
+    height : 1.7,
     types : ['fire', 'flying']
   },
   {
     name : 'Butterfree',
-    height : 10,
+    height : 1.1,
     types : ['bug', 'flying']
   },
   {
     name : 'Kakuna',
-    height : 6,
+    height : 0.6,
     types : ['bug', 'poison']
   }
 ]
+
+for (let i = 0; i < pokemonList.length; i++ ) {
+  if  (pokemonList[i].height > 1.5) {
+    document.write(pokemonList[i].name + ' height: '  + pokemonList[i].height + ' -Wow, that\'s big!' + '<br>');
+  } else {
+      document.write(pokemonList[i].name + ' height: '  + pokemonList[i].height + '<br>'); // the <br> tag added a line break
+  }
+}
