@@ -21,10 +21,15 @@ let pokemonList = [ // creating an array of objects
   }
 ]
 
-for (let i = 0; i < pokemonList.length; i++ ) { // to loop through each pokemon character
-  if  (pokemonList[i].height > 1.5) {
-    document.write(pokemonList[i].name + ' height: '  + pokemonList[i].height + ' -Wow, that\'s big!' + '<br>');
-  } else {
-      document.write(pokemonList[i].name + ' height: '  + pokemonList[i].height + '<br>'); // the <br> tag added a line break
-  }
-}
+// for (let i = 0; i < pokemonList.length; i++ ) { to loop through each pokemon character
+//   if  (pokemonList[i].height > 1.5) {
+//     document.write('<p>' + pokemonList[i].name + ' height: '  + pokemonList[i].height + ' -Wow, that\'s big!' + '</p>');
+//   } else {
+//       document.write('<p>' + pokemonList[i].name + ' height: '  + pokemonList[i].height + '</p>');  the <br> tag added a line break while the <p> tag also adds a line break and puts each pokemon in a different paragraph
+//   }
+// }
+
+pokemonList.forEach(function(pokemon) {
+  console.log(pokemon.name + ' height: ' + pokemon.height + ' ' + pokemon.types );
+    document.write('<p>' + pokemon.name + ' height: '  + pokemon.height + ' ' + pokemon.types + '</p>')
+})
