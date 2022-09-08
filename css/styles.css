@@ -9,6 +9,37 @@
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: var(--primary-color);
-  margin: 2rem;
+  margin: 1rem;
   font-weight: 600;
+  }
+
+  /* .main-title {
+    margin-left: 6rem;
+  } */
+
+.button {
+  background-color: #870290;
+  color: #fff;
+  font-size: 1rem;
+  width: 15rem;
+  height: 5rem;
+  border-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus{
+  opacity: 0.8;
+}
+
+li {
+  list-style: none;
+}
+
+/* media queries */
+@media all and (max-width : 500px) {
+  .button {
+    width: 10rem;
+    font-size: 0.7rem;
+  }
 }
