@@ -29,11 +29,41 @@ let pokemonRepository = (function() {
   function add(item) {
     return pokemonList.push(item) ? {} : '';
     // pokemonList.push(item)
+  };
+
+  function addListItem(pokemon) {
+    let allPokemon = document.querySelector('.pokemon-list');
+
+    let listItem = document.createElement('li');
+
+    let button = document.createElement('button');
+    button.innerText = pokemon.name; //to enable the for each loob return each name of the pokemon characters do not put the pokemon.name in quotation marks
+
+     //listens to clicks on the pokemon buttons created and returns the information of the button
+    button.addEventListener('click', function(event) { // the event in the function can be any word but its best to stick with event
+      showDetails(pokemon); //event handler
+    })
+
+    button.classList.add('button');
+    listItem.appendChild(button);
+    allPokemon.appendChild(listItem);
+
+  };
+
+  function showDetails(pokemon) {
+    console.log(pokemon);
   }
+
+  // function newButtons(pokemon) {
+  //     let button = document.createElement('button');
+  //     showDetails(pokemon)
+  // }
 
   return {
     getAll : getAll,
-    add : add
+    add : add,
+    addListItem : addListItem,
+
   };
 })();
 
@@ -48,9 +78,6 @@ pokemonRepository.add({name: 'Ivysaur', height: 1, types : ['grass', 'poison']})
 //   }
 // }
 
-let pokemonList = pokemonRepository.getAll();
-
- pokemonList.forEach(function(pokemon) {
-    console.log(pokemon.name + ' height: ' + pokemon.height + ' ' + pokemon.types );
-    document.write('<p>' + pokemon.name + ' height: '  + pokemon.height + ' ' + pokemon.types + '</p>');
- })
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
