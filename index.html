@@ -9,8 +9,10 @@
   </head>
   <body class="container">
     <h1 class="main-title">Pokedex</h1>
-      <ul class="pokemon-list">
+      <ul class="pokemon-list" id="pokemon-list">
       </ul>
+    <script src="js/promise-polyfill.js"></script> <!-- load the polyfill first before the fetch and then the script.js -->
+    <script src="js/fetch-polyfill.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
