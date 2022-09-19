@@ -18,7 +18,7 @@ body {
   background-color: var(--secondary-color);
   color: #fff;
   font-size: 1rem;
-   width: 15rem;
+  width: 15rem;
   height: 5rem;
   border-color: var(--primary-color);
   cursor: pointer;
@@ -52,8 +52,6 @@ li {
 .nav-img {
   width: 2.5rem;
 }
-
-
 
 /* media queries */
 @media all and (max-width : 500px) {
