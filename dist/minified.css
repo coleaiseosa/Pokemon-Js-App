@@ -51,6 +51,13 @@ li {
   width: 2.5rem;
 }
 
+.pokemon-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 /* media queries */
 @media all and (max-width : 500px) {
   .button {
