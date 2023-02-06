@@ -1,7 +1,16 @@
 const pokemonRepository = (function() {
   const pokemonList = [];
-  const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=51';
+  const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=52';
 
+  let searchButton = $(".btn-warning");
+  searchButton.on("click", function() {
+    let uPokemonList = $(".pokemon-list");
+    uPokemonList.empty();
+    getByName($(".form-control").val()).forEach(function(pokemon) {
+      addListItem(pokemon);
+    });
+  })
+  
   function getAll() {
     return pokemonList;
   };
@@ -13,6 +22,15 @@ const pokemonRepository = (function() {
     console.log('pokemon is not correct')
   }
 }
+
+// This function returns a pokemon array with all pokemons
+    // that include the "search" term in their Name
+    function getByName(search) {
+      return pokemonList.filter(function(pokemon) {
+          return pokemon.name.toLowerCase().includes(search.toLowerCase());
+      });
+  }
+
 
   function addListItem(pokemon) {
     const allPokemon = document.querySelector('.pokemon-list');

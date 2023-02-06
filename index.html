@@ -12,8 +12,8 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <a class="navbar-brand" href="#"> <img class="nav-img" src="img/pikachu.png" alt="Pokemon logo"> Pokemon</a>
+      <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <a class="navbar-brand topic" href="#"> <img class="nav-img" src="img/pikachu.png" alt="Pokemon logo"> Pokemon</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,16 +22,21 @@
           <ul class="navbar-nav mr-auto">
 
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
 
           </ul>
         </div>
+
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-warning my-2 my-sm-0" type="button">Search</button>
+      </form>
       </nav>
     </header>
 
     <div class="container">
-          <ul class="pokemon-list"></ul>
+          <ul class="pokemon-list list-group"></ul>
 
           <!-- <div>
             <a href="https://pokeapi.co/api/v2/pokemon/?offset=0&limit=51"><button>Previous</button></a>
@@ -58,6 +63,11 @@
         </div>
       </div>
     </div>
+
+    <footer class="navbar navbar-light" id="footer">
+      <p>This page was created by Marcella Cole</p>
+      <a href="https://github.com/coleaiseosa/First-Js-App" target="_blank">See code on GitHub</a>
+  </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> <!-- i used jquery core as opposed to jquery slim from the bootstrap documentation -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

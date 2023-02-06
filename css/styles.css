@@ -27,6 +27,7 @@ body {
 .button:hover,
 .button:focus{
   opacity: 0.8;
+  animation: button-shake 0.4s;
 }
 
 .main-title {
@@ -54,15 +55,32 @@ li {
 }
 
 .pokemon-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1600px;
 }
+
+.nav-link {
+  color: #fff;
+}
+
+
 
 /* media queries */
 @media all and (max-width : 500px) {
   .button {
     width: 10rem;
     font-size: 0.7rem;
+  }
+
+  .pokemon-list {
+    grid-template-columns: 1fr 1fr;
   }
 
 }
